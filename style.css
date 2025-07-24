@@ -1,7 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   margin: 2em;
-  color: black;
 }
 input, textarea {
   width: 300px;
@@ -16,7 +15,7 @@ ul {
 }
 li {
   margin-bottom: 1em;
-  background:rgb(234, 16, 16);
+  background: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
 }

@@ -1,0 +1,22 @@
+<h1>All Feedback</h1>
+
+{{!-- Debug: See what's passed in --}}
+<pre>{{json testimonials}}</pre>
+
+{{#if testimonials.length}}
+  <ul>
+    {{#each testimonials}}
+      <li>
+        <strong>{{this.name}}</strong>: {{this.message}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No testimonials yet.</p>
+{{/if}}
+
+<a href="/submit">Submit more feedback</a>
+
+{{#if error}}
+  <div style="color: red;">{{error}}</div>
+{{/if}}

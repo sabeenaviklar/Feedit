@@ -1,0 +1,13 @@
+<h1>All Feedback</h1>
+
+{{#each feedbacks}}
+  <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+    <h3>{{this.name}} ({{this.email}})</h3>
+    <p>{{this.message}}</p>
+    <small>Submitted on: {{this.date}}</small>
+  </div>
+{{else}}
+  <p>No feedback submitted yet.</p>
+{{/each}}
+
+<a href="/submit">Submit More Feedback</a>

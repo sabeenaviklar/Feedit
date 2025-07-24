@@ -1,13 +1,13 @@
 
 <h1>Submit Your Feedback</h1>
 
-<% if (errors) { %>
+<!-- <% if (errors) { %>
     <ul style="color: red;">
         <% errors.forEach(error => { %>
             <li><%= error.msg %></li>
         <% }) %>
     </ul>
-<% } %>
+<% } %> -->
 
 <form action="/submit" method="POST">
     <input type="text" name="name" placeholder="Your Name" value="<%= formData?.name || '' %>">

@@ -1,0 +1,15 @@
+<h1>Submit Your Feedback</h1>
+{{#if errors}}
+  <ul style="color: red;">
+    {{#each errors}}<li>{{this}}</li>{{/each}}
+  </ul>
+{{/if}}
+<form method="POST" action="/submit">
+  <input type="text" name="name" placeholder="Your Name" value="{{name}}">
+  <br><br>
+  <textarea name="message" placeholder="Your Feedback">{{message}}</textarea>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
+<br>
+<a href="/testimonials">View All Feedback</a>
