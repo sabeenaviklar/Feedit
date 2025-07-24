@@ -1,22 +1,24 @@
-<h1>All Feedback</h1>
-
-{{!-- Debug: See what's passed in --}}
-<pre>{{json testimonials}}</pre>
+<h2>All Feedback</h2>
 
 {{#if testimonials.length}}
-  <ul>
+  <ul class="feedback-list">
     {{#each testimonials}}
-      <li>
-        <strong>{{this.name}}</strong>: {{this.message}}
+      <li class="feedback-card">
+        <span class="feedback-date">
+          {{this.date}}
+        </span>
+        <strong>{{this.name}}</strong> ({{this.email}})
+        <div>{{this.message}}</div>
       </li>
     {{/each}}
   </ul>
 {{else}}
-  <p>No testimonials yet.</p>
+  <p>No feedback has been submitted yet.</p>
 {{/if}}
 
+<br>
 <a href="/submit">Submit more feedback</a>
 
 {{#if error}}
-  <div style="color: red;">{{error}}</div>
+  <div class="error-list">{{error}}</div>
 {{/if}}
